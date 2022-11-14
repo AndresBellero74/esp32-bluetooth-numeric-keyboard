@@ -3,24 +3,10 @@
  *  A simple Macro keyboard built with an ESP32 and a        
  *  4*4 Button Matrix.
  *  
- *  I use a TinyPICO ESP32 for this project, but you could
+ *  I use a ESP32 DEVKIT  for this project, but you could
  *  use any ESP32, just adjust the row and col pins if
  *  required.
- *  
- *  Parts:
- *  TinyPICO ESP32 - https://www.tinypico.com/
- *  4*4 Keypad Button Matrix* - http://s.click.aliexpress.com/e/CqnjTgGg 
- *  
- *  * = Affilate
- *  
- *  If you find what I do useful and would like to support me,
- *  please consider becoming a sponsor on Github
- *  https://github.com/sponsors/witnessmenow/
- *                                                                 
- *  Written by Brian Lough
- *  YouTube: https://www.youtube.com/brianlough
- *  Tindie: https://www.tindie.com/stores/brianlough/
- *  Twitter: https://twitter.com/witnessmenow                                 
+ *      
  *******************************************************************/
 
 // ----------------------------
@@ -54,7 +40,7 @@ char keys[ROW_NUM][COLUMN_NUM] = {
 };
 
 byte pin_rows[ROW_NUM] = {18, 5, 17, 16}; // GIOP18, GIOP5, GIOP17, GIOP16 connect to the row pins
-byte pin_column[COLUMN_NUM] = {4, 2, 15};  // GIOP4, GIOP0, GIOP2 connect to the column pins
+byte pin_column[COLUMN_NUM] = {4, 2, 15};  // GIOP4, GIOP2, GIOP215 connect to the column pins
 
 Keypad keypad = Keypad( makeKeymap(keys), pin_rows, pin_column, ROW_NUM, COLUMN_NUM );
 
